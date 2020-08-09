@@ -4,4 +4,12 @@ from .models import ToDo
 class ToDoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ToDo
-        fields = '__all__'
+        fields = [
+            'id',
+            'name',
+            'description',
+            'start_date',
+            'end_date',
+            'completed',
+            'date_completed'
+        ]
